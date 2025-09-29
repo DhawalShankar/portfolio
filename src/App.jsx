@@ -82,7 +82,7 @@ const Portfolio = () => {
     },
     {
       title: "ISKCON Website Reimagined",
-      desc: "This is my imagination of ISKCON-Kanpur Website",
+      desc: "A React based Website featuring ISKCON-Kanpur and the rich legacy of ISKCON",
       tech: ["ReactJS", "TailwindCSS"],
       icon: Flower,
       link:"https://iskcon-kanpur.vercel.app/"
