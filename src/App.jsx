@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Menu, X, Github, Linkedin, Mail, ArrowRight, Code, Palette, Zap, Sun, Moon, FileText, Lightbulb } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, ArrowRight, Code, Palette, Zap, Sun, Moon, FileText, Lightbulb,Hand, BookOpenCheck, Flower } from 'lucide-react';
 
 const Portfolio = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -70,21 +70,21 @@ const Portfolio = () => {
       title: "CCS - School Website",
       desc: "A React-based Web App with Razorpay Payment Portal",
       tech: ["ReactJS", "TailwindCSS"],
-      color: "from-purple-500 to-pink-500",
+      icon: BookOpenCheck,
       link:"https://ccs-official.vercel.app/"
     },
     {
       title: "IntelliSign",
       desc: "A CNN based ML software for ASL based Sign Language Translation",
       tech: ["CNN", "OpenCV", "MediaPipe", "Streamlit"],
-      color: "from-cyan-500 to-blue-500",
+      icon: Hand,
       link: "https://github.com/DhawalShankar/intellisign.git"
     },
     {
       title: "ISKCON Website Reimagined",
       desc: "This is my imagination of ISKCON-Kanpur Website",
       tech: ["ReactJS", "TailwindCSS"],
-      color: "from-orange-500 to-red-500",
+      icon: Flower,
       link:"https://iskcon-kanpur.vercel.app/"
     }
   ];
@@ -219,10 +219,13 @@ const Portfolio = () => {
             {projects.map((project, i) => (
               <div key={i} className="scroll-animate group">
                 <div className={`relative overflow-hidden rounded-2xl ${darkMode ? 'bg-slate-800/50 border-slate-700/50 hover:border-slate-600' : 'bg-white border-orange-200 hover:border-orange-400'} border transition-all duration-500 hover:scale-105`}>
-                  <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${project.icon} opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none`}></div>
                   
                   <div className="p-8">
-                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${project.color} mb-6 group-hover:scale-110 transition-transform duration-500`}></div>
+                    <div className="mb-6">
+  <project.icon className={`w-12 h-12 ${darkMode ? 'text-cyan-400' : 'text-orange-600'}`} />
+</div>
+
                     
                     <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
                     <p className={`${darkMode ? 'text-slate-400' : 'text-slate-600'} mb-4`}>{project.desc}</p>
