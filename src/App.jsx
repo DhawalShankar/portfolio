@@ -81,9 +81,9 @@ const Portfolio = () => {
       link: "https://github.com/DhawalShankar/intellisign.git"
     },
     {
-      title: "ISKCON Website Reimagined",
+      title: "ElectiveXChange",
       desc: "A React based Website featuring ISKCON-Kanpur and the rich legacy of ISKCON",
-      tech: ["ReactJS", "TailwindCSS"],
+      tech: ["Firebase", "Firestore", "ReactJS", "TailwindCSS"],
       icon: Flower,
       link:"https://iskcon-kanpur.vercel.app/"
     }
@@ -91,9 +91,9 @@ const Portfolio = () => {
 
   const skills = [
     { icon: Lightbulb, name: "Problem Solving", items: ["Java", "Data Structures", "Algorithms"] },
-    { icon: Code, name: "Development", items: ["React", "Node.js", "Python", "TailwindCSS"] },
+    { icon: Code, name: "Development", items: ["React", "Node.js", "Python", "TailwindCSS", "Firebase"] },
     { icon: Palette, name: "Design", items: ["Figma", "Canva"] },
-    { icon: Zap, name: "Tools", items: ["Git", "GitHub", "Firebase", "Postman"] }
+    { icon: Zap, name: "Tools", items: ["Git", "GitHub", "Postman", "VS Code"] }
   ];
 
   return (
@@ -224,9 +224,7 @@ const Portfolio = () => {
                   <div className="p-8">
                     <div className="mb-6">
   <project.icon className={`w-12 h-12 ${darkMode ? 'text-cyan-400' : 'text-orange-600'}`} />
-</div>
-
-                    
+</div>         
                     <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
                     <p className={`${darkMode ? 'text-slate-400' : 'text-slate-600'} mb-4`}>{project.desc}</p>
                     
@@ -240,9 +238,7 @@ const Portfolio = () => {
                     
                    <a href={project.link} target="_blank" rel="noopener noreferrer" 
    className={`inline-flex items-center gap-2 ${darkMode ? 'text-cyan-400' : 'text-orange-600'} group-hover:gap-3 transition-all duration-300`}>
-  View Project <ArrowRight size={16} />
-</a>
-
+  View Project <ArrowRight size={16} /></a>
                   </div>
                 </div>
               </div>
@@ -257,7 +253,6 @@ const Portfolio = () => {
           <h2 className={`scroll-animate text-5xl md:text-6xl font-bold mb-16 text-center`}>
             Skills & <span className={`${darkMode ? 'bg-gradient-to-r from-cyan-400 to-blue-500' : 'bg-gradient-to-r from-orange-500 to-amber-600'} bg-clip-text text-transparent`}>Expertise</span>
           </h2>
-
           <div className="grid md:grid-cols-2 gap-8">
             {skills.map((skill, i) => (
               <div key={i} className={`scroll-animate p-8 rounded-2xl ${darkMode ? 'bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/50' : 'bg-white border-orange-200 hover:border-orange-400'} border transition-all duration-500 hover:scale-105`}>
@@ -276,7 +271,6 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-32 px-6">
         <div className="max-w-3xl mx-auto text-center">
