@@ -159,7 +159,7 @@ const Portfolio = () => {
   ];
 
   const navLinks = ['About', 'Projects', 'Skills', 'Contact'];
-<Analytics/>
+
   return (
     
     <div className={`${darkMode ? 'bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white' : 'bg-gradient-to-br from-orange-50 via-amber-50 to-orange-50 text-slate-900'} min-h-screen transition-colors duration-500`}>
@@ -174,7 +174,7 @@ const Portfolio = () => {
                 <div ref={windowLeftRef} className="absolute left-0 top-0 bottom-0 right-1/2 bg-gradient-to-r from-slate-900 via-slate-800 to-black" style={{ transformOrigin: 'right center' }} />
                 <div ref={windowRightRef} className="absolute right-0 top-0 bottom-0 left-1/2 bg-gradient-to-l from-slate-900 via-slate-800 to-black" style={{ transformOrigin: 'left center' }} />
               </div>
-
+              <Analytics/>
               <div ref={characterRef} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                 <div ref={headRef} style={{ display: 'inline-block' }}>
                   <img src="/SHIN.png" alt="Shin-chan" style={{ width: '70px', height: 'auto', imageRendering: 'crisp-edges', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.3))' }} />
