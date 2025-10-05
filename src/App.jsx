@@ -184,9 +184,9 @@ const Portfolio = () => {
               <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-5 bg-white/60 rounded-sm shadow-sm" style={{ transform: 'translateX(-50%) rotate(-2deg)' }}></div>
               <div className="relative">
                 <p className="text-slate-900 text-sm font-bold mb-1" style={{ fontFamily: "'Comic Sans MS', 'Marker Felt', cursive" }}>Yo! 👋</p>
-                <p className="text-slate-800 text-xs leading-relaxed" style={{ fontFamily: "'Comic Sans MS', cursive" }}>Looking for Summer Internship! 🚀</p>
+                <p className="text-slate-800 text-xs leading-relaxed" style={{ fontFamily: "'Comic Sans MS', cursive" }}>This Guy is looking for a summer internship! Hire Him! 🚀</p>
                 <div className="mt-2 pt-1 border-t border-yellow-400/50">
-                  <p className="text-slate-600 text-[10px] italic text-right">- Shinchan</p>
+                  <p className="text-slate-600 text-[10px] italic text-right">- Shinchan Nohara</p>
                 </div>
               </div>
               <div className="absolute -top-1.5 right-6">
@@ -198,15 +198,12 @@ const Portfolio = () => {
 
           {/* Mobile Version - Micro Character */}
           <div className="fixed bottom-4 right-4 z-[60] pointer-events-none md:hidden">
-            <div className="relative">
-              <div className="relative w-16 h-16 bg-black rounded-full overflow-hidden shadow-xl">
-                <div className="absolute inset-0 bg-gradient-radial from-purple-900/30 via-transparent to-transparent animate-pulse"></div>
-                <img src="/SHIN.png" alt="Shin-chan" className="absolute inset-0 w-full h-full object-cover scale-150" style={{ imageRendering: 'crisp-edges', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))' }} />
-              </div>
+  <div className="relative">
+    <img src="/SHIN.png" alt="Shin-chan" className="w-16 h-16 object-contain" style={{ imageRendering: 'crisp-edges', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))' }} />
               
               <div className={`absolute -top-16 -left-20 ${darkMode ? 'bg-yellow-300' : 'bg-yellow-200'} p-2 rounded-lg shadow-xl border ${darkMode ? 'border-yellow-400' : 'border-yellow-300'}`} style={{ width: '110px' }}>
                 <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-10 h-3 bg-white/60 rounded-sm shadow-sm" style={{ transform: 'translateX(-50%) rotate(-2deg)' }}></div>
-                <p className="text-slate-900 text-[10px] font-bold mb-0.5" style={{ fontFamily: "'Comic Sans MS', cursive" }}>Hire Me! 🚀</p>
+                <p className="text-slate-900 text-[10px] font-bold mb-0.5" style={{ fontFamily: "'Comic Sans MS', cursive" }}>Yo! Hire this Guy! 🚀</p>
                 <p className="text-slate-600 text-[8px] italic" style={{ fontFamily: "'Comic Sans MS', cursive" }}>- Shinchan</p>
                 <div className="absolute -top-1 right-4">
                   <div className="w-1.5 h-1.5 bg-red-500 rounded-full shadow-md"></div>
