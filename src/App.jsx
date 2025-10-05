@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Menu, X, Github, Linkedin, Mail, ArrowRight, Code, Palette, Zap, Sun, Moon, FileText, Lightbulb,Hand, BookOpenCheck, Flower } from 'lucide-react';
+import { gsap } from 'gsap';
 
 const Portfolio = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -82,10 +83,10 @@ const Portfolio = () => {
     },
     {
       title: "ElectiveXChange",
-      desc: "A React based Website featuring ISKCON-Kanpur and the rich legacy of ISKCON",
+      desc: "ElectiveXchange streamlines elective swapping for students, making course selection intuitive, collaborative, and interactive — a modern solution for academic planning.",
       tech: ["Firebase", "Firestore", "ReactJS", "TailwindCSS"],
       icon: Flower,
-      link:"https://iskcon-kanpur.vercel.app/"
+      link:"https://electivexchange.vercel.app/"
     }
   ];
 
