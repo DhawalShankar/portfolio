@@ -2,10 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Menu, X, Github, Linkedin, Mail, ArrowRight, Code, Palette, Zap, Sun, Moon, FileText, Lightbulb, Hand, BookOpenCheck, Flower } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import { Analytics } from "@vercel/analytics/next"
 gsap.registerPlugin(ScrollTrigger);
 
 const Portfolio = () => {
+  
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [showCharacter, setShowCharacter] = useState(true);
@@ -158,8 +159,9 @@ const Portfolio = () => {
   ];
 
   const navLinks = ['About', 'Projects', 'Skills', 'Contact'];
-
+<Analytics/>
   return (
+    
     <div className={`${darkMode ? 'bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white' : 'bg-gradient-to-br from-orange-50 via-amber-50 to-orange-50 text-slate-900'} min-h-screen transition-colors duration-500`}>
       {/* Animated Window and Character */}
       {showCharacter && (
