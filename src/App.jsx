@@ -184,7 +184,7 @@ const Portfolio = () => {
               <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-5 bg-white/60 rounded-sm shadow-sm" style={{ transform: 'translateX(-50%) rotate(-2deg)' }}></div>
               <div className="relative">
                 <p className="text-slate-900 text-sm font-bold mb-1" style={{ fontFamily: "'Comic Sans MS', 'Marker Felt', cursive" }}>Yo! 👋</p>
-                <p className="text-slate-800 text-xs leading-relaxed" style={{ fontFamily: "'Comic Sans MS', cursive" }}>This Guy is looking for a summer internship! Hire Him! 🚀</p>
+                <p className="text-slate-800 text-xs leading-relaxed" style={{ fontFamily: "'Comic Sans MS', cursive" }}>Offer him an internship, or I’ll deploy myself in your repo! 🚀</p>
                 <div className="mt-2 pt-1 border-t border-yellow-400/50">
                   <p className="text-slate-600 text-[10px] italic text-right">- Shinchan Nohara</p>
                 </div>
@@ -203,8 +203,8 @@ const Portfolio = () => {
               
               <div className={`absolute -top-16 -left-20 ${darkMode ? 'bg-yellow-300' : 'bg-yellow-200'} p-2 rounded-lg shadow-xl border ${darkMode ? 'border-yellow-400' : 'border-yellow-300'}`} style={{ width: '110px' }}>
                 <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-10 h-3 bg-white/60 rounded-sm shadow-sm" style={{ transform: 'translateX(-50%) rotate(-2deg)' }}></div>
-                <p className="text-slate-900 text-[10px] font-bold mb-0.5" style={{ fontFamily: "'Comic Sans MS', cursive" }}>Yo! Hire this Guy! 🚀</p>
-                <p className="text-slate-600 text-[8px] italic" style={{ fontFamily: "'Comic Sans MS', cursive" }}>- Shinchan</p>
+                <p className="text-slate-900 text-[9px] font-bold mb-0.5" style={{ fontFamily: "'Helvetica', cursive" }}>Recruit him fast, or I 'll start committing chaos!</p>
+                <p className="text-slate-600 text-[8px] italic" style={{ fontFamily: "'Helvetica', cursive" }}>- Shinchan Nohara</p>
                 <div className="absolute -top-1 right-4">
                   <div className="w-1.5 h-1.5 bg-red-500 rounded-full shadow-md"></div>
                   <div className="w-0.5 h-1.5 bg-gray-400 mx-auto"></div>
