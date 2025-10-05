@@ -1,69 +1,318 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Menu, X, Github, Linkedin, Mail, ArrowRight, Code, Palette, Zap, Sun, Moon, FileText, Lightbulb,Hand, BookOpenCheck, Flower } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, ArrowRight, Code, Palette, Zap, Sun, Moon, FileText, Lightbulb, Hand, BookOpenCheck, Flower } from 'lucide-react';
 import { gsap } from 'gsap';
 
 const Portfolio = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const [showCharacter, setShowCharacter] = useState(true);
   const heroRef = useRef(null);
   const projectsRef = useRef(null);
   const skillsRef = useRef(null);
+  const characterRef = useRef(null);
+  const windowRef = useRef(null);
+  const noteRef = useRef(null);
+  const windowLeftRef = useRef(null);
+  const windowRightRef = useRef(null);
+  const headRef = useRef(null);
+
+  useEffect(() => {
+    if (!showCharacter) return;
+
+    const tl = gsap.timeline();
+    
+    // Initial setup - everything hidden
+    gsap.set(windowRef.current, { 
+      opacity: 0,
+      x: 0,
+      y: 0
+    });
+    
+    gsap.set([windowLeftRef.current, windowRightRef.current], {
+      scaleX: 0,
+      transformOrigin: 'center center'
+    });
+    
+    gsap.set(characterRef.current, { 
+      scale: 0.3, 
+      opacity: 0,
+      x: 0,
+      y: 30
+    });
+
+    gsap.set(noteRef.current, {
+      scale: 0,
+      opacity: 0
+    });
+
+    // SCENE 1: Black window appears (like a portal)
+    tl.to(windowRef.current, {
+      opacity: 1,
+      duration: 0.5,
+      delay: 2
+    })
+    
+    // SCENE 2: Window opens from center (revealing black void)
+    .to([windowLeftRef.current, windowRightRef.current], {
+      scaleX: 1,
+      duration: 0.8,
+      ease: 'power2.out'
+    })
+    
+    // SCENE 3: Character peeks out from the darkness
+    .to(characterRef.current, {
+      scale: 0.5,
+      opacity: 1,
+      y: 10,
+      duration: 0.6,
+      ease: 'back.out(2)'
+    })
+    
+    // Character looks left
+    .to(headRef.current, {
+      rotation: -20,
+      transformOrigin: 'center center',
+      duration: 0.4,
+      ease: 'power2.inOut'
+    })
+    
+    // Character looks right
+    .to(headRef.current, {
+      rotation: 20,
+      duration: 0.6,
+      ease: 'power2.inOut'
+    })
+    
+    // Character looks forward
+    .to(headRef.current, {
+      rotation: 0,
+      duration: 0.3,
+      ease: 'power2.inOut'
+    })
+    
+    // SCENE 4: Character climbs out and grows
+    .to(characterRef.current, {
+      scale: 1,
+      y: 150,
+      duration: 1.2,
+      ease: 'power2.out'
+    })
+    
+    // SCENE 5: Walk across screen with realistic bob
+    .to(characterRef.current, {
+      x: 400,
+      duration: 4,
+      ease: 'none',
+      onUpdate: function() {
+        const progress = this.progress();
+        const bob = Math.sin(progress * Math.PI * 12) * 8;
+        gsap.set(characterRef.current, { 
+          y: 150 + bob 
+        });
+      }
+    })
+    
+    // SCENE 6: Stop and examine project (curious head tilt)
+    .to(headRef.current, {
+      rotation: 25,
+      duration: 0.3,
+      ease: 'power1.out'
+    })
+    .to(characterRef.current, {
+      scale: 1.1,
+      duration: 0.5
+    }, '<')
+    
+    // Excited jump!
+    .to(characterRef.current, {
+      y: 120,
+      duration: 0.3,
+      ease: 'power2.out'
+    })
+    .to(characterRef.current, {
+      y: 150,
+      duration: 0.3,
+      ease: 'bounce.out'
+    })
+    .to(headRef.current, {
+      rotation: 0,
+      duration: 0.3
+    }, '<')
+    .to(characterRef.current, {
+      scale: 1,
+      duration: 0.3
+    }, '<')
+    
+    // SCENE 7: Sneak walk (crouched) towards navbar
+    .to(characterRef.current, {
+      scaleY: 0.85,
+      scaleX: 1.05,
+      duration: 0.4,
+      ease: 'power2.out'
+    })
+    .to(characterRef.current, {
+      x: 650,
+      y: 100,
+      duration: 3,
+      ease: 'power1.inOut',
+      onUpdate: function() {
+        const progress = this.progress();
+        const sneak = Math.sin(progress * Math.PI * 18) * 5;
+        gsap.set(characterRef.current, { 
+          y: 100 + sneak 
+        });
+      }
+    })
+    
+    // Stand up straight
+    .to(characterRef.current, {
+      scaleY: 1,
+      scaleX: 1,
+      duration: 0.4
+    })
+    
+    // SCENE 8: Note appears
+    .to(noteRef.current, {
+      scale: 1,
+      opacity: 1,
+      rotation: 5,
+      duration: 0.6,
+      ease: 'elastic.out(1, 0.6)',
+      delay: 0.3
+    })
+    
+    // SCENE 9: Jump for joy
+    .to(characterRef.current, {
+      y: 60,
+      duration: 0.4,
+      ease: 'power2.out',
+      delay: 0.5
+    })
+    .to(characterRef.current, {
+      y: 100,
+      duration: 0.4,
+      ease: 'bounce.out'
+    })
+    
+    // SCENE 10: Wave goodbye (head nod)
+    .to(headRef.current, {
+      rotation: -15,
+      duration: 0.2,
+      repeat: 5,
+      yoyo: true,
+      ease: 'power1.inOut'
+    })
+    
+    // SCENE 11: Run back to window
+    .to(characterRef.current, {
+      x: 100,
+      duration: 2,
+      ease: 'power2.in',
+      onUpdate: function() {
+        const progress = this.progress();
+        const run = Math.sin(progress * Math.PI * 15) * 12;
+        gsap.set(characterRef.current, { 
+          y: 100 + run 
+        });
+      }
+    })
+    
+    // SCENE 12: Jump into window and shrink
+    .to(characterRef.current, {
+      scale: 0.7,
+      y: 80,
+      duration: 0.5,
+      ease: 'power2.in'
+    })
+    .to(characterRef.current, {
+      scale: 0.4,
+      y: 30,
+      duration: 0.4,
+      ease: 'power2.in'
+    })
+    .to(characterRef.current, {
+      scale: 0.2,
+      opacity: 0,
+      y: 10,
+      duration: 0.3,
+      ease: 'power2.in'
+    })
+    
+    // SCENE 13: Close black portal
+    .to([windowLeftRef.current, windowRightRef.current], {
+      scaleX: 0,
+      duration: 0.7,
+      ease: 'power2.inOut'
+    }, '-=0.2')
+    
+    // Window disappears
+    .to(windowRef.current, {
+      opacity: 0,
+      duration: 0.5,
+      onComplete: () => setShowCharacter(false)
+    }, '+=0.3')
+    
+    // Note fades away
+    .to(noteRef.current, {
+      opacity: 0,
+      scale: 0.8,
+      duration: 0.5,
+      ease: 'power2.in'
+    }, '<');
+
+    return () => {
+      tl.kill();
+    };
+  }, [showCharacter]);
 
   useEffect(() => {
     // Hero animations
-    const heroTimeline = {
-      elements: heroRef.current?.querySelectorAll('.hero-animate'),
-      delay: 0
-    };
-
-    if (heroTimeline.elements) {
-      heroTimeline.elements.forEach((el, i) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        
-        setTimeout(() => {
-          el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-          el.style.opacity = '1';
-          el.style.transform = 'translateY(0)';
-        }, i * 150);
+    const heroElements = heroRef.current?.querySelectorAll('.hero-animate');
+    if (heroElements) {
+      heroElements.forEach((el, i) => {
+        gsap.fromTo(el,
+          { opacity: 0, y: 30 },
+          { 
+            opacity: 1, 
+            y: 0, 
+            duration: 0.8, 
+            delay: i * 0.15,
+            ease: 'power3.out'
+          }
+        );
       });
     }
 
-    // Floating animation for hero elements
+    // Floating animation
     const floatingElements = document.querySelectorAll('.float-animation');
     floatingElements.forEach((el, i) => {
-      const animate = () => {
-        el.style.transition = 'transform 3s ease-in-out';
-        el.style.transform = `translateY(${Math.sin(Date.now() / 1000 + i) * 10}px)`;
-        requestAnimationFrame(animate);
-      };
-      animate();
+      gsap.to(el, {
+        y: '+=20',
+        duration: 3 + i * 0.5,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut'
+      });
     });
 
     // Scroll animations
-    const observerOptions = {
-      threshold: 0.2,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-
     const scrollElements = document.querySelectorAll('.scroll-animate');
     scrollElements.forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(50px)';
-      el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-      observer.observe(el);
+      gsap.fromTo(el,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+          }
+        }
+      );
     });
-
-    return () => observer.disconnect();
   }, []);
 
   const projects = [
@@ -99,6 +348,95 @@ const Portfolio = () => {
 
   return (
     <div className={`${darkMode ? 'bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white' : 'bg-gradient-to-br from-orange-50 via-amber-50 to-orange-50 text-slate-900'} min-h-screen transition-colors duration-500`}>
+      {/* Animated Window and Character */}
+      {showCharacter && (
+        <div className="fixed top-20 left-32 z-[60] pointer-events-none">
+          {/* Black Portal Window */}
+          <div 
+            ref={windowRef}
+            className="relative"
+            style={{ 
+              width: '200px', 
+              height: '180px',
+              opacity: 0
+            }}
+          >
+            {/* Black void/portal effect */}
+            <div className="absolute inset-0 bg-black rounded-lg overflow-hidden shadow-2xl">
+              {/* Portal glow effect */}
+              <div className="absolute inset-0 bg-gradient-radial from-purple-900/30 via-transparent to-transparent animate-pulse"></div>
+              
+              {/* Left curtain opening from center */}
+              <div 
+                ref={windowLeftRef}
+                className="absolute left-0 top-0 bottom-0 right-1/2 bg-gradient-to-r from-slate-900 via-slate-800 to-black"
+                style={{ transformOrigin: 'right center' }}
+              />
+              
+              {/* Right curtain opening from center */}
+              <div 
+                ref={windowRightRef}
+                className="absolute right-0 top-0 bottom-0 left-1/2 bg-gradient-to-l from-slate-900 via-slate-800 to-black"
+                style={{ transformOrigin: 'left center' }}
+              />
+            </div>
+
+            {/* Shin-chan Character - Using Image */}
+            <div 
+              ref={characterRef}
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <div ref={headRef} style={{ display: 'inline-block' }}>
+                <img 
+                  src="/SHIN.png"
+                  alt="Shin-chan"
+                  style={{ 
+                    width: '120px', 
+                    height: 'auto',
+                    imageRendering: 'crisp-edges',
+                    filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.3))'
+                  }}
+                />
+              </div>
+            </div>
+          </div> 
+
+          {/* Sticky Note */}
+          <div 
+            ref={noteRef}
+            className={`absolute top-0 left-64 ${darkMode ? 'bg-yellow-300' : 'bg-yellow-200'} p-5 rounded-lg shadow-2xl border-2 ${darkMode ? 'border-yellow-400' : 'border-yellow-300'}`}
+            style={{ 
+              width: '200px',
+              boxShadow: '0 20px 50px rgba(0,0,0,0.3)'
+            }}
+          >
+            {/* Tape */}
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-white/60 rounded-sm shadow-sm" 
+                 style={{ transform: 'translateX(-50%) rotate(-2deg)' }}></div>
+            
+            <div className="relative">
+              <p className="text-slate-900 text-base font-bold mb-2" style={{ fontFamily: "'Comic Sans MS', 'Marker Felt', cursive" }}>
+                Yo! 👋✨
+              </p>
+              <p className="text-slate-800 text-sm leading-relaxed" style={{ fontFamily: "'Comic Sans MS', cursive" }}>
+                This Guy is<br/>
+                looking for a Summer<br/>
+                Internship. Hire Him! 🚀
+              </p>
+              <div className="mt-3 pt-2 border-t border-yellow-400/50">
+                <p className="text-slate-600 text-xs italic text-right">- Shinchan Nohara 😊</p>
+              </div>
+            </div>
+            
+            {/* Pushpin */}
+            <div className="absolute -top-2 right-8">
+              <div className="w-3 h-3 bg-red-500 rounded-full shadow-lg"></div>
+              <div className="w-1 h-3 bg-gray-400 mx-auto"></div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Navigation */}
       <nav className={`fixed w-full z-50 ${darkMode ? 'bg-slate-950/80 border-slate-800/50' : 'bg-white/80 border-orange-200/50'} backdrop-blur-lg border-b transition-colors duration-500`}>
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -224,8 +562,8 @@ const Portfolio = () => {
                   
                   <div className="p-8">
                     <div className="mb-6">
-  <project.icon className={`w-12 h-12 ${darkMode ? 'text-cyan-400' : 'text-orange-600'}`} />
-</div>         
+                      <project.icon className={`w-12 h-12 ${darkMode ? 'text-cyan-400' : 'text-orange-600'}`} />
+                    </div>         
                     <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
                     <p className={`${darkMode ? 'text-slate-400' : 'text-slate-600'} mb-4`}>{project.desc}</p>
                     
@@ -237,9 +575,10 @@ const Portfolio = () => {
                       ))}
                     </div>
                     
-                   <a href={project.link} target="_blank" rel="noopener noreferrer" 
-   className={`inline-flex items-center gap-2 ${darkMode ? 'text-cyan-400' : 'text-orange-600'} group-hover:gap-3 transition-all duration-300`}>
-  View Project <ArrowRight size={16} /></a>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" 
+                       className={`inline-flex items-center gap-2 ${darkMode ? 'text-cyan-400' : 'text-orange-600'} group-hover:gap-3 transition-all duration-300`}>
+                      View Project <ArrowRight size={16} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -272,6 +611,7 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-32 px-6">
         <div className="max-w-3xl mx-auto text-center">
