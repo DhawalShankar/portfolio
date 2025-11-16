@@ -1,7 +1,7 @@
 # 🌐 Dhawal Shukla Portfolio
 
 <p align="center">
-  <img src="https://media.giphy.com/media/L05HgB2h6qICDs5Sms/giphy.gif" width="220" alt="Hacker-style coding GIF"/>
+  <img src="https://cdn.pixabay.com/animation/2022/09/07/08/55/08-55-43-_512.gif" width="220" alt="Coding GIF"/>
 </p>
 
 <p align="center">
