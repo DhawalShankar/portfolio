@@ -1,15 +1,15 @@
-Here’s a professional, modern, and visually appealing README tailored for your portfolio website:
+Got it. Let’s make it **sleek, recruiter-friendly, and modern**, with a professional GIF that adds a subtle dynamic vibe without being too flashy. Here’s a revised version:
 
 ---
 
 # 🌐 Dhawal Shukla Portfolio
 
 <p align="center">
-  <img src="https://media.giphy.com/media/3o7qE1YN7aBOFPRw8E/giphy.gif" width="150" alt="Coding GIF"/>
+  <img src="https://media.giphy.com/media/3ohc0TW9CMH1vuzMly/giphy.gif" width="180" alt="Professional coding GIF"/>
 </p>
 
 <p align="center">
-  <em>Showcasing my work, journey, and passion as a Full-Stack Developer & Software Engineer from Bharat 🇮🇳</em>
+  <em>A passionate <b>Full-Stack Developer</b> & aspiring <b>Software Engineer</b> from Bharat 🇮🇳</em>
 </p>
 
 <p align="center">
@@ -21,15 +21,11 @@ Here’s a professional, modern, and visually appealing README tailored for your
 
 ---
 
-## 🔗 About This Website
+## 🔗 About This Portfolio
 
-This portfolio website is a personal hub that demonstrates:
+This portfolio highlights my **technical expertise**, **projects**, and **growth journey** as a software professional.
 
-* 🌱 My skills in **Full-Stack Development**, **UI/UX Design**, and **Software Engineering**
-* 🚀 Projects I’ve worked on, including web apps, AI tools, and creative publications
-* 📝 My journey as a coder, poet, and storyteller
-
-It’s built to be **fast, modern, and responsive**, making sure visitors have an immersive experience while exploring my work.
+It is designed to give recruiters and collaborators a **clear, concise, and interactive experience**, showing what I can deliver in real-world development and problem-solving.
 
 ---
 
@@ -59,42 +55,38 @@ It’s built to be **fast, modern, and responsive**, making sure visitors have a
 
 ## 🚀 Key Features
 
-* Fully **responsive and mobile-friendly**
+* Clean, professional **design for recruiters**
+* Fully **responsive across devices**
 * Interactive **project showcase** with live demo links
-* Smooth **scroll animations** and transitions
-* **Integrated contact section** for easy communication
-* Modern **dark/light theme toggle**
+* Smooth **animations** for engaging experience
+* **Dark/light mode toggle** for user preference
 
 ---
 
-## 🌟 Highlighted Projects
+## 🌟 Selected Projects
 
-| Project                                                        | Description                                   | Tech                        |
-| :------------------------------------------------------------- | :-------------------------------------------- | :-------------------------- |
-| 🧠 [IntelliSign](https://github.com/DhawalShankar/intellisign) | Sign Language → Text Converter using AI + IoT | Python · CNN · Raspberry Pi |
-| 💳 [Cosmo India Prakashan](https://cosmo-india.vercel.app)     | A digital publication platform                | React · Tailwind            |
-| 🎓 [ElectiveXchange](https://electivexchange.vercel.app/)      | Student portal for seamless elective swapping | React · Tailwind · Firebase |
+| Project                                                        | Description                               | Tech                        |
+| :------------------------------------------------------------- | :---------------------------------------- | :-------------------------- |
+| 🧠 [IntelliSign](https://github.com/DhawalShankar/intellisign) | AI-powered Sign Language → Text Converter | Python · CNN · Raspberry Pi |
+| 💳 [Cosmo India Prakashan](https://cosmo-india.vercel.app)     | Digital publication platform              | React · Tailwind            |
+| 🎓 [ElectiveXchange](https://electivexchange.vercel.app/)      | Smart portal for elective swapping        | React · Tailwind · Firebase |
 
 ---
 
-## 🎨 Design Philosophy
+## 🎯 Professional Approach
 
-* Minimalistic, clean UI
-* Prioritize **ease of navigation and readability**
-* Highlight **projects and achievements** without clutter
+* Minimalistic yet informative UI
+* Emphasis on **projects, skills, and results**
+* Designed to make a **strong impression on recruiters**
 
 ---
 
 ## 🪷 Final Words
 
-> **"I code to create, learn to grow, and serve to uplift."**
+> **"I code to solve problems, learn continuously, and deliver impact."**
 
 <p align="center">
-✨ Explore, connect, and collaborate! ✨  
+✨ Explore my work, connect with me, and collaborate! ✨  
 </p>
 
 ---
-
-If you want, I can also **make a version with GIF previews for each project** so your README feels super modern and “alive,” like a live portfolio showcase.
-
-Do you want me to do that?
