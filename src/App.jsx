@@ -6,7 +6,10 @@ import { Analytics } from "@vercel/analytics/react"
 gsap.registerPlugin(ScrollTrigger);
 
 const Portfolio = () => {
-  
+  useEffect(() => {
+  document.title = "Dhawal Shukla";
+  }, []);
+  <link rel="icon" href="SHIN.png" />
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [showCharacter, setShowCharacter] = useState(true);
@@ -258,7 +261,7 @@ const Portfolio = () => {
           ))}
         </div>
       </div>
-
+          
       {/* Hero Section */}
       <section ref={heroRef} className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
         <div className="absolute inset-0 overflow-hidden">
