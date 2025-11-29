@@ -9,7 +9,6 @@ const Portfolio = () => {
   useEffect(() => {
   document.title = "Dhawal Shukla";
   }, []);
-  <link rel="icon" href="SHIN.png" />
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [showCharacter, setShowCharacter] = useState(true);
@@ -263,7 +262,7 @@ const Portfolio = () => {
       </div>
           
       {/* Hero Section */}
-      <section ref={heroRef} className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+      <section id='about' ref={heroRef} className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
         <div className="absolute inset-0 overflow-hidden">
           <div className={`absolute top-20 left-10 w-72 h-72 ${darkMode ? 'bg-cyan-500/20' : 'bg-orange-400/30'} rounded-full blur-3xl float-animation`}></div>
           <div className={`absolute bottom-20 right-10 w-96 h-96 ${darkMode ? 'bg-blue-500/20' : 'bg-amber-400/30'} rounded-full blur-3xl float-animation`}></div>

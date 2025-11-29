@@ -1,7 +1,7 @@
 # 🌐 Dhawal Shukla Portfolio
 
 <p align="center">
-  <img src="https://cdn.pixabay.com/animation/2022/09/07/08/55/08-55-43-_512.gif" width="220" alt="Coding GIF"/>
+  <img src="https://c.tenor.com/31Y1Gw8Zd98AAAAC/tenor.gif" width="220" alt="Coding GIF"/>
 </p>
 
 <p align="center">
