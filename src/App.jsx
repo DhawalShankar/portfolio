@@ -282,7 +282,7 @@ const Portfolio = () => {
           </h2>
           
           <p className={`hero-animate text-xl md:text-2xl ${darkMode ? 'text-slate-300' : 'text-slate-600'} mb-8 max-w-2xl mx-auto`}>
-            Crafting exceptional digital experiences through code and design
+            1k+ Linkedin Followers | DSA | Development | Published Poet 
           </p>
           
           <div className="hero-animate flex gap-4 justify-center flex-wrap">
