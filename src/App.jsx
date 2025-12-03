@@ -139,14 +139,14 @@ const Portfolio = () => {
     },
     {
       title: "IntelliSign",
-      desc: "A CNN based ML software for ASL based Sign Language Translation",
+      desc: "An ML software for ASL based Sign Language Translation",
       tech: ["CNN", "OpenCV", "MediaPipe", "Streamlit"],
       icon: Hand,
       link: "https://github.com/DhawalShankar/intellisign.git"
     },
     {
       title: "ElectiveXChange",
-      desc: "ElectiveXchange streamlines elective swapping for students, making course selection intuitive, collaborative, and interactive — a modern solution for academic planning.",
+      desc: "ElectiveXchange streamlines elective swapping for students, making course selection intuitive, collaborative, and interactive — a modern solution for academic planning. Got over 300 users on the day of launch",
       tech: ["Firebase", "Firestore", "ReactJS", "TailwindCSS"],
       icon: Flower,
       link: "https://electivexchange.vercel.app/"
@@ -155,7 +155,7 @@ const Portfolio = () => {
 
   const skills = [
     { icon: Lightbulb, name: "Problem Solving", items: ["Java", "Data Structures", "Algorithms"] },
-    { icon: Code, name: "Development", items: ["React", "Node.js", "Python", "TailwindCSS", "Firebase"] },
+    { icon: Code, name: "Development", items: ["MongoDB", "Express", "React", "Node.js", "Python", "TailwindCSS", "Firebase"] },
     { icon: Palette, name: "Design", items: ["Figma", "Canva"] },
     { icon: Zap, name: "Tools", items: ["Git", "GitHub", "Postman", "VS Code"] }
   ];
