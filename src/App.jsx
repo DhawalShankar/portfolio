@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Menu, X, Github, Linkedin, Mail, ArrowRight, Code, Palette, Zap, Sun, Moon, FileText, Lightbulb, Hand, BookOpenCheck, Flower } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, ArrowRight, Code, Palette, Zap, Sun, Moon, FileText, Lightbulb, Hand, BookOpenCheck, Flower, Book } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Analytics } from "@vercel/analytics/react"
@@ -138,16 +138,16 @@ const Portfolio = () => {
       link: "https://ccs-official.vercel.app/"
     },
     {
-      title: "IntelliSign",
-      desc: "An ML software for ASL based Sign Language Translation",
-      tech: ["CNN", "OpenCV", "MediaPipe", "Streamlit"],
-      icon: Hand,
-      link: "https://github.com/DhawalShankar/intellisign.git"
+      title: "Cosmo India Prakashan",
+      desc: "A Publishing House and Media Company Website",
+      tech: ["MongoDB", "Node.js", "React", "JWT", "Tailwind"],
+      icon: Book,
+      link: "https://cosmoindiaprakashan.in"
     },
     {
       title: "ElectiveXChange",
       desc: "ElectiveXchange streamlines elective swapping for students, making course selection intuitive, collaborative, and interactive — a modern solution for academic planning. Got over 300 users on the day of launch",
-      tech: ["Firebase", "Firestore", "ReactJS", "TailwindCSS"],
+      tech: ["Firebase (OAuth)", "React", "TailwindCSS", "Firestore"],
       icon: Flower,
       link: "https://electivexchange.vercel.app/"
     }
@@ -155,9 +155,9 @@ const Portfolio = () => {
 
   const skills = [
     { icon: Lightbulb, name: "Problem Solving", items: ["Java", "Data Structures", "Algorithms"] },
-    { icon: Code, name: "Development", items: ["MongoDB", "Express", "React", "Node.js", "Python", "TailwindCSS", "Firebase"] },
+    { icon: Code, name: "Development", items: ["MongoDB", "Express", "React", "Node.js", "Python", "TailwindCSS", "Firebase", "JWT", "OAuth", "Payment Gateways"] },
     { icon: Palette, name: "Design", items: ["Figma", "Canva"] },
-    { icon: Zap, name: "Tools", items: ["Git", "GitHub", "Postman", "VS Code"] }
+    { icon: Zap, name: "Tools", items: ["Git", "GitHub", "Postman", "VS Code", "Thunder-Client"] }
   ];
 
   const navLinks = ['About', 'Projects', 'Skills', 'Contact'];
@@ -188,7 +188,7 @@ const Portfolio = () => {
               <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-5 bg-white/60 rounded-sm shadow-sm" style={{ transform: 'translateX(-50%) rotate(-2deg)' }}></div>
               <div className="relative">
                 <p className="text-slate-900 text-sm font-bold mb-1" style={{ fontFamily: "'Comic Sans MS', 'Marker Felt', cursive" }}>Yo! 👋</p>
-                <p className="text-slate-800 text-xs leading-relaxed" style={{ fontFamily: "'Comic Sans MS', cursive" }}>Offer him an internship, or I’ll deploy myself in your repo! 🚀</p>
+                <p className="text-slate-800 text-xs leading-relaxed" style={{ fontFamily: "'Comic Sans MS', cursive" }}>Dhawal is serious about shipping projects, but not so serious about growing up – just like me. 🚀</p>
                 <div className="mt-2 pt-1 border-t border-yellow-400/50">
                   <p className="text-slate-600 text-[10px] italic text-right">- Shinchan Nohara</p>
                 </div>
