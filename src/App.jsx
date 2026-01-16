@@ -657,7 +657,7 @@ const CoverPage = ({ darkMode }) => (
         Backend Engineer
       </p>
       <p className={`text-sm md:text-lg mb-8 ${darkMode ? 'text-slate-400' : 'text-amber-600'}`}>
-        Backend • 1.2k+ LinkedIn Followers • Published Writer
+        DSA • 1.2k+ LinkedIn Followers • Published Writer
       </p>
 
       <div className="flex flex-wrap gap-3 md:gap-6 justify-center mt-12">
