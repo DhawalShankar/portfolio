@@ -589,7 +589,7 @@ const App = () => {
             <div className={`text-center ${darkMode ? 'text-white' : 'text-slate-900'}`}>
               <h1 className="text-3xl font-bold mb-4">Page {currentPage + 1}</h1>
               <p className="text-sm text-slate-500">
-                {isMobile ? 'Use Navbar to navigate' : 'Use arrow keys or buttons'}
+                {isMobile ? 'Swipe here to navigate!' : 'Use arrow keys or buttons'}
               </p>
             </div>
           </div>
