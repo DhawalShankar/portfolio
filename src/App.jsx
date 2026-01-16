@@ -2,8 +2,11 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Mail, Code, Sun, Moon, Book, ExternalLink, Award, Briefcase, GraduationCap, FileText, Github, Linkedin } from 'lucide-react';
 import { Menu, X } from 'lucide-react';
-const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  
+    const useIsMobile = () => {
+    const [isMobile, setIsMobile] = useState(false);
+   
+
 
   useEffect(() => {
     const checkMobile = () => {
@@ -637,10 +640,28 @@ const App = () => {
 };
 
 const CoverPage = ({ darkMode }) => (
-  <div className={`p-6 md:p-12 flex flex-col items-center justify-center min-h-[600px] ${
+  <div
+  className={`p-6 md:p-12 flex flex-col items-center justify-center min-h-[600px] ${
     darkMode ? 'text-white' : 'text-slate-900'
-  }`}>
-    <motion.div
+  }`}
+>
+  <div className="flex justify-center mb-8">
+    <div
+      className={`w-40 h-40 rounded-full border-4 overflow-hidden transition-all duration-300
+        ${
+          darkMode
+            ? 'border-cyan-400 bg-slate-800 shadow-[0_0_25px_rgba(34,211,238,0.35)]'
+            : 'border-orange-500 bg-orange-100 shadow-[0_0_25px_rgba(234,88,12,0.35)]'
+        }`}
+    >
+      <img
+        src="/ds.png"
+        alt="Dhawal Shukla"
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+  <motion.div
       initial={{ scale: 0.9, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -992,7 +1013,7 @@ const ContactPage = ({ darkMode }) => (
       </div>
       
       <p className={`text-lg ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-        Thank you for exploring my portfolio! 📚
+        Thanks for Visiting! See you again! 📚
       </p>
     </motion.div>
   </div>
