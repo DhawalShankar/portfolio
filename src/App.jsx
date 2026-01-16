@@ -70,7 +70,15 @@ const MobileNav = ({ darkMode, pages, currentPage, goToPage, onClose }) => (
 
 // Mobile Header Component (no header tag - will be wrapped by parent)
 const MobileHeader = ({ darkMode, setDarkMode, onMenuClick }) => (
-  <nav className="px-4 py-3 flex items-center justify-between">
+  <nav
+  className={`fixed top-0 left-0 right-0 z-50 px-4 py-3 flex items-center justify-between
+    backdrop-blur-md shadow-sm transition-colors duration-300
+    ${
+      darkMode
+        ? 'bg-slate-900/80 border-b border-slate-800'
+        : 'bg-white/80 border-b border-orange-200'
+    }`}
+>
     <h1 className={`text-lg font-bold ${darkMode ? 'text-cyan-400' : 'text-orange-600'}`}>
       Dhawal Shukla
     </h1>
@@ -569,24 +577,25 @@ const App = () => {
             </motion.div>
           </AnimatePresence>
         </div>
-      </div>
-                <div className={`pt-16 ${isMobile ? 'px-4' : 'px-8'}`}>
-        <MobilePageWrapper
+      </div><MobilePageWrapper
           onSwipeLeft={() => goToPage(currentPage + 1)}
           onSwipeRight={() => goToPage(currentPage - 1)}
           darkMode={darkMode}
         >
+                <div className={`pt-16 ${isMobile ? 'px-4' : 'px-8'}`}>
+        
           <div className={`${isMobile ? 'min-h-[70vh]' : 'min-h-screen'} flex items-center justify-center`}>
             {/* Your page content */}
             <div className={`text-center ${darkMode ? 'text-white' : 'text-slate-900'}`}>
               <h1 className="text-3xl font-bold mb-4">Page {currentPage + 1}</h1>
               <p className="text-sm text-slate-500">
-                {isMobile ? 'Swipe left/right to navigate' : 'Use arrow keys or buttons'}
+                {isMobile ? 'Use Navbar to navigate' : 'Use arrow keys or buttons'}
               </p>
             </div>
           </div>
-        </MobilePageWrapper>
+        
       </div>
+      </MobilePageWrapper>
 {/* Mobile page indicator */}
 {isMobile ? (
   <MobilePageIndicator
@@ -678,7 +687,7 @@ const CoverPage = ({ darkMode }) => (
         Backend Engineer
       </p>
       <p className={`text-sm md:text-lg mb-8 ${darkMode ? 'text-slate-400' : 'text-amber-600'}`}>
-        DSA • 1.2k+ LinkedIn Followers • Published Writer
+        DSA • 1.2k+ LinkedIn Followers • Writer
       </p>
 
       <div className="flex flex-wrap gap-3 md:gap-6 justify-center mt-12">
