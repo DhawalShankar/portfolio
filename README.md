@@ -49,17 +49,19 @@ Designed for **comfort during longer reading**, not visual noise.
 
 ## 📸 Portfolio Preview
 
+## 📸 Portfolio Preview
+
 ### 📘 Cover Page
-![Cover Page](cover.png)
+![Cover Page](./screenshots/cover.png)
 
 ### 📖 Book-style Page Navigation (Desktop)
-![Desktop Book View](book.png)
+![Desktop Book View](./screenshots/book.png)
 
 ### 🌗 Dark / Light Theme Support
-![Theme Toggle](dark.png)
+![Theme Toggle](./screenshots/dark.png)
 
 ### 📱 Mobile Swipe Experience
-![Mobile Swipe](swipe.png)
+![Mobile Swipe](./screenshots/swipe.png)
 
 > *(Screenshots demonstrate the book metaphor, theme switching, and swipe-based navigation.)*
 
