@@ -1,123 +1,27 @@
-# 📘 Dhawal Shukla — Portfolio
+# Dhawal Shukla — Portfolio
 
-### *A Portfolio Designed Like a Book*
+**[dhawalshukl.vercel.app](https://dhawalshukl.vercel.app)**
 
----
-
-## 🌐 Live Portfolio
-👉 https://dhawalshukl.vercel.app/
+Backend Developer · ECE @ JIIT Noida · Writer
 
 ---
 
-## 📖 What This Portfolio Is
+## About
 
-This is not a traditional scrolling portfolio.
+B.Tech student with 3 production platforms shipped — serving 900+ users with real-time messaging, payment integration, and automated workflows. Seeking Backend Developer Internship.
 
-This website is designed as a **book-like experience**, where:
-- each section behaves like a **page**
-- content is explored **chapter by chapter**
-- navigation feels intentional, calm, and readable
+**Skills:** Node.js · Express · MongoDB · Socket.io · JWT · OAuth · Razorpay · React · Firebase · Vercel
 
-The goal is to present work and thinking the way a book does —
-**with flow, structure, and focus**.
+## Featured Projects
 
----
+**VartaLang** — Language exchange platform with real-time chat (Socket.io, sub-400ms latency), hybrid JWT + OAuth auth, CRON-based job automation, and 22-language matching algorithm.
 
-## 🧭 How to Navigate the Book
+**Cosmo India Prakashan** — E-commerce platform for a publishing business. Razorpay payments, serverless REST API, bcrypt auth, Nodemailer order confirmations.
 
-### 🖥️ Desktop Experience
-- Pages open like a **book**
-- Navigation uses **Next / Previous** controls
-- Sections feel like **chapters**, not scroll blocks
+**ElectiveXChange** — Course matching platform for JIIT students. 209 registered users, 26% conversion from 800+ visitors, priority-based elective exchange algorithm.
 
-### 📱 Mobile Experience
-- Pages can be **swiped horizontally**
-- Gesture-based navigation mimics real book reading
-- Optimized for one-hand use
+## Contact
 
----
-
-## 🌗 Themes & Accessibility
-
-- Supports **Light Mode and Dark Mode**
-- Global theme toggle available
-- Visual balance preserved across both themes
-
-Designed for **comfort during longer reading**, not visual noise.
-
----
-## 📸 Portfolio Preview
-
-### 📘 Cover Page
-![Cover Page](./public/screenshots/cover.png)
-
-### 📖 Book-style Page Navigation (Desktop)
-![Desktop Book View](./public/screenshots/book.png)
-
-### 🌗 Dark / Light Theme Support
-![Theme Toggle](./public/screenshots/dark.png)
-
-### 📱 Mobile Swipe Experience
-![Mobile Swipe](./public/screenshots/swipe.png)
-
-> *(Screenshots demonstrate the book metaphor, theme switching, and swipe-based navigation.)*
-
----
-
-## 📚 Chapters Inside the Book
-
-- **Cover** — Introduction & identity  
-- **About** — Background and mindset  
-- **Projects** — Selected, meaningful work  
-- **Skills** — Technologies and systems  
-- **Experience** — Roles, responsibilities, collaboration  
-- **Contact** — Ways to connect  
-
-Each section is treated as a **chapter**, not a section dump.
-
----
-
-## 🎨 Design Philosophy
-
-- Book-style navigation over infinite scrolling  
-- Minimal UI with deliberate motion  
-- No unnecessary animations  
-- Content > decoration  
-
-This mirrors how I approach engineering:
-
-> **Structured. Sequential. Intentional.**
-
----
-
-## 🚫 What This Portfolio Is Not
-
-- Not a flashy landing page  
-- Not a list of every experiment  
-- Not trend-driven  
-
-It is meant to feel **calm, thoughtful, and readable**.
-
----
-
-## 🧠 Why a Book?
-
-A book:
-- encourages **focus**
-- has a **beginning, middle, and flow**
-- respects the reader’s attention
-
-This portfolio applies the same principles.
-
----
-
-## 📬 Contact
-
-- **Email:** dhawalmannu@gmail.com  
-- **LinkedIn:** https://www.linkedin.com/in/dhawalshukl/  
-- **GitHub:** https://github.com/DhawalShankar  
-
----
-
-*This portfolio is a living book.  
-New chapters will be added over time.*
+- dhawalmannu@gmail.com
+- [LinkedIn](https://linkedin.com/in/dhawalshukl)
+- [GitHub](https://github.com/dhawalshankar)
